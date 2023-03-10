@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam</title>
+</head>
+<body>
+<script>
+class Apple{
+    constructor() {
+        this.weight = 10;
+    }
+    checkApple(){
+        return this.weight;
+    }
+}
+class Human{
+    constructor(gender,weight) {
+        this.gender = gender;
+        this.weight = weight;
+        this.speak = ""
+    }
+    say(speak){
+        this.speak = speak;
+        return this.speak
+    }
+    eat(apple){
+        if(apple.weight>0) {
+            apple.weight--
+            this.weight++
+        }
+    }
+    checkHuman(){
+        return this.weight
+    }
+}
+let apple = new Apple();
+var adam = new Human("men",60);
+var eva = new Human("women",50);
+adam.eat(apple)
+alert(eva.say("give me"))
+document.write(apple.checkApple()+"<br>")
+document.write(adam.checkHuman())
+</script>
+</body>
+</html>
