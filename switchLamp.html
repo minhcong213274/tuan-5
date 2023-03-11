@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switchLamp</title>
+</head>
+<body>
+<script>
+  class SwitchButton{
+    constructor() {
+      this.electric = false;
+    }
+      switchOn(){
+      this.electric = true;
+      return this.electric
+  }
+  switchOff(){
+      this.electric = false;
+      return this.electric
+  }
+
+  }
+  class ElectricLamp{
+      constructor() {
+          this.status = false;
+          this.switchButton = switchButton
+      }
+      statusLight(){
+          if (switchButton.electric == true) {
+              this.status = true;
+              alert("lingting")
+          }if (switchButton.electric ==false){
+              this.status = false
+              alert("not lighting")
+          }
+      }
+  }
+  var switchButton = new SwitchButton();
+  var electricLamp = new ElectricLamp();
+  switchButton.switchOn()
+  electricLamp.statusLight()
+</script>
+</body>
+</html>
