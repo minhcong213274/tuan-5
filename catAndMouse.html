@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cat and mouse</title>
+</head>
+<body>
+<script>
+  class Mouse{
+    constructor(name,weight,speed) {
+      this.name = name;
+      this.weight = weight;
+      this.speed = speed;
+      this.status = true;
+      this.say = "chit chit"
+    }
+  }
+  class Cat{
+    constructor(name,weight,speed) {
+      this.name = name;
+      this.weight = weight;
+      this.speed = speed;
+      this.say = "meo meo"
+        this.catched = false;
+    }
+    heavy(){
+        return this.weight
+    }
+    catch(mouse){
+      if(this.speed>mouse.speed){
+          this.catched = true;
+      }else {
+          this.catched = false;
+      }
+    }
+    eat(mouse){
+        if (this.catched === true){
+            mouse.status = false;
+            this.weight += mouse.weight;
+        }
+    }
+  }
+  cat  = new Cat("tom",40,30)
+  mouse = new Mouse("je",20,20)
+  cat.catch(mouse)
+  cat.eat(mouse)
+  document.write(cat.say)
+
+</script>
+</body>
+</html>
