@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>television</title>
+</head>
+<body>
+<script>
+  class Remote {
+    constructor() {
+      this.tv = television
+    }
+      changeChannel(channel){
+          television.channel = channel
+      }
+      addVolume(){
+        if (television.isOn === true) {
+            television.volume++
+        }
+      }
+      reduceVolume(){
+        if (television.isOn === true) {
+            television.volume--
+        }
+      }
+  }
+  class Television{
+    constructor(name) {
+      this.name = name
+      this.channel = 1
+      this.volume = 10
+      this.isOn = false;
+    }
+turnOn(){
+        this.isOn = true;
+}
+turnOff(){
+        this.isOn = false;
+}
+  }
+  var television = new Television("sony")
+  var remote = new Remote()
+  television.turnOn()
+  remote.changeChannel(7)
+  remote.addVolume(television)
+  document.write(television.channel)
+
+</script>
+</body>
+</html>
